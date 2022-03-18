@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-web-app1-practice",
+  "version": "0.0.0",
+  "description": "NodejsWebApp1Practice",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
