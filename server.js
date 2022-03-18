@@ -17,7 +17,9 @@ app.get('/index.js', (req, res) => {
 app.get('/SignIn', (req, res) => {
     res.sendFile(path.join(__dirname, 'WebPages/SignIn.html'));
 })
-
+app.get('/SignIn.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'WebPages/Scripts/SignIn.js'));
+})
 
 app.listen(port, () => {
     console.log("someone is on port 8888");

@@ -34,6 +34,12 @@
     <Content Include="WebPages\index.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="WebPages\SignUp.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="WebPages\Scripts\SignIn.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="WebPages\SignIn.html">
       <SubType>Code</SubType>
     </Content>
