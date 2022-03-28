@@ -2,8 +2,9 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 const port = 8888;
-
 const path = require('path');
+
+const info = require(path.join(__dirname, "WebPages/info.json"));
 
 app.use(bodyParser.json());
 
@@ -26,8 +27,15 @@ app.post('/SignInCheck', (req, res) => {
     checkSignIn();
     async function checkSignIn() {
         var credentials = req.body;
-        console.log(credentials.password);
 
+        if (info.email == credentials.email && info.password == credentials.password) {
+            JSON.stringify(info);
+            res.send(info);
+            console.log('signed in');
+        } else {
+            res.send(credentials);
+            console.log('wrong credentials');
+        }
     }
 });
 
@@ -44,7 +52,6 @@ app.get('/Info', (req, res) => {
     res.sendFile(path.join(__dirname, 'WebPages/info.json'));
 
 })
-
 
 app.listen(port, () => {
     console.log("someone is on port 8888");

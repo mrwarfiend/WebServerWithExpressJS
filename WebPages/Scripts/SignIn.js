@@ -1,4 +1,7 @@
-const { json } = require("express");
+const { json, response, response } = require("express");
+const bodyparser = require('body-parser');
+
+const originalPage = document.body.innerHTML;
 
 async function testSignIn() {
     var email = document.getElementById('exampleInputEmail1').value;
@@ -6,7 +9,8 @@ async function testSignIn() {
 
     var credentials = {
         'email': email,
-        'password': pass
+        'password': pass,
+        'userId': 0
     };
 
     let response = await fetch('http://localhost:8888/SignInCheck', {
@@ -16,5 +20,17 @@ async function testSignIn() {
             'Content-type': 'application/json'
         }
     });
+
+    
+   
+    console.log(response);
+
+    if (item.userId == 0) {
+
+        document.body.innerHTML += "<h1>Try Again!</h1>";
+    } else if (item.userId > 0) {
+        document.body.innerHTML = originalPage;
+        document.body.innerHTML += "<h1>Signed In!</h1>";
+    }
 
 }
