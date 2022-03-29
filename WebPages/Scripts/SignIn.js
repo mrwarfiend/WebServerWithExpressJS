@@ -1,9 +1,10 @@
-const { json, response, response } = require("express");
+const { json, response} = require("express");
 const bodyparser = require('body-parser');
 
 const originalPage = document.body.innerHTML;
 
 async function testSignIn() {
+
     var email = document.getElementById('exampleInputEmail1').value;
     var pass = document.getElementById('exampleInputPassword1').value;
 
@@ -19,17 +20,16 @@ async function testSignIn() {
         headers: {
             'Content-type': 'application/json'
         }
-    });
-
-    
-   
+    })
+        .then(response => response.json());
+        
     console.log(response);
 
-    if (item.userId == 0) {
+    if (response.userId == 0) {
 
         document.body.innerHTML += "<h1>Try Again!</h1>";
-    } else if (item.userId > 0) {
-        document.body.innerHTML = originalPage;
+    } else if (response.userId > 0) {
+
         document.body.innerHTML += "<h1>Signed In!</h1>";
     }
 
