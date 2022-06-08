@@ -1,10 +1,11 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
-const port = 8888;
+const port = 4444;
 const path = require('path');
 
 const info = require(path.join(__dirname, "WebPages/info.json"));
+const db = require(path.join(__dirname, "DataBase/Database.js"));
 
 app.use(bodyParser.json());
 
@@ -54,5 +55,5 @@ app.get('/Info', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log("someone is on port 8888");
+    console.log("someone is on port 4444");
 })
