@@ -28,13 +28,16 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Classes\User.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="DataBase\Database.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="WebPages\index.html">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="WebPages\info.json">
       <SubType>Code</SubType>
     </Content>
     <Content Include="WebPages\Scripts\SignUp.js">
@@ -54,6 +57,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataBase\" />
+    <Folder Include="Classes\" />
     <Folder Include="WebPages\" />
     <Folder Include="WebPages\CSS\" />
     <Folder Include="WebPages\Scripts\" />

@@ -1,0 +1,3 @@
+C:\Personal Web Projects\PracticeWebServer\NodejsWebApp1Practice\obj\Debug\NodejsWebApp1Practice.njsproj.AssemblyReference.cache
+C:\Personal Web Projects\PracticeWebServer\NodejsWebApp1Practice\obj\Debug\NodejsWebApp1Practice.njsproj.CoreCompileInputs.cache
+C:\Personal Web Projects\PracticeWebServer\NodejsWebApp1Practice\bin\Microsoft.NodejsTools.WebRole.dll
